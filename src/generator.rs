@@ -475,9 +475,9 @@ impl<'a> SourceGenerator<'a> {
             TypeDefKind::Enum(_) => {
                 bail!("unsupported anonymous enum type found in WIT package")
             }
-            TypeDefKind::Union(_) => {
-                bail!("unsupported anonymous union type found in WIT package")
-            }
+            // TypeDefKind::Union(_) => {
+            //     bail!("unsupported anonymous union type found in WIT package")
+            // }
             TypeDefKind::Future(ty) => {
                 source.push_str("Future<");
                 Self::print_optional_type(resolve, ty.as_ref(), source, trie)?;

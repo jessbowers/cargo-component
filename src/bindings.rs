@@ -445,6 +445,7 @@ impl<'a> BindingsEncoder<'a> {
 
         let package = resolve.packages.alloc(Package {
             name: pkg_name.clone(),
+            docs: Default::default(),
             interfaces: Default::default(),
             worlds: Default::default(),
         });
